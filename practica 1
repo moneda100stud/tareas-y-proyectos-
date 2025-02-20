@@ -1,1 +1,33 @@
+from tkinter import *
+from tkinter import messagebox
+
+# Crear la ventana principal
+root = Tk()
+root.title("Aplicación GUI")
+root.geometry("300x200")
+root.configure(bg="lightgreen")  # Cambiar el color de fondo
+
+# Agregar una etiqueta de bienvenida
+label = Label(root, text="¡Bienvenido!", bg="lightblue")
+label.pack(pady=10)
+
+# Agregar un cuadro de texto para la entrada del usuario
+entry = Entry(root, width=30)
+entry.pack(pady=10)
+
+# Función para mostrar el contenido del cuadro de texto
+def mostrar_mensaje():
+    texto = entry.get()
+    messagebox.showinfo("Mensaje", f"Has escrito: {texto}")
+
+# Agregar un botón para mostrar el mensaje
+boton_mensaje = Button(root, text="Mostrar Mensaje", command=mostrar_mensaje)
+boton_mensaje.pack(pady=10)
+
+# Agregar un botón para cerrar la aplicación
+boton_cerrar = Button(root, text="Cerrar", command=root.destroy)
+boton_cerrar.pack(pady=10)
+
+# Ejecutar la aplicación
+root.mainloop()
 
