@@ -8,7 +8,7 @@ root.geometry("300x200")
 root.configure(bg="lightgreen")  # Cambiar el color de fondo
 
 # Agregar una etiqueta de bienvenida
-label = Label(root, text="¡Bienvenido!", bg="lightblue")
+label = Label(root, text="¡Bienvenido holas !", bg="lightblue")
 label.pack(pady=10)
 
 # Agregar un cuadro de texto para la entrada del usuario
